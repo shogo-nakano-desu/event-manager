@@ -2,6 +2,8 @@ import { Id } from '../../common/values/Id.value';
 import { UserName } from '../values/UserName.value';
 export class User {
   private readonly userId: Id;
+  private readonly teamId: Id;
+
   #firstName: UserName;
   #lastName: UserName;
 
