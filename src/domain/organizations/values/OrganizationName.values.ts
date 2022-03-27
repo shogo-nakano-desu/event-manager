@@ -1,11 +1,12 @@
+import { HttpException, HttpStatus } from '@nestjs/common';
+
 export class OrganizationName {
   #name: string;
   constructor(name: string) {
-    if (name.length === 0) {
-      throw new Error('Organization name should be at least 1 character');
-    } else if (name.length > 50) {
-      throw new Error(
-        'Organization name should not be more than 50 characters',
+    if (name.length === 0 || name.length > 50) {
+      throw new HttpException(
+        'Organization name should not be 0 character and more than 50 characters',
+        HttpStatus.BAD_REQUEST,
       );
     }
     this.#name = name;
