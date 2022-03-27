@@ -1,11 +1,11 @@
-import { UserId } from '../values/UserId.value';
-import { Name } from '../values/Name.value';
+import { Id } from '../../common/values/Id.value';
+import { UserName } from '../values/UserName.value';
 export class User {
-  private readonly userId: UserId;
-  #firstName: Name;
-  #lastName: Name;
+  private readonly userId: Id;
+  #firstName: UserName;
+  #lastName: UserName;
 
-  constructor(userId: UserId, firstName: Name, lastName: Name) {
+  constructor(userId: Id, firstName: UserName, lastName: UserName) {
     this.userId = userId;
     this.#firstName = firstName;
     this.#lastName = lastName;

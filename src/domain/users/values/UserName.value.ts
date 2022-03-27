@@ -1,4 +1,4 @@
-export class Name {
+export class UserName {
   #name: string;
   constructor(name: string) {
     if (name.length === 0 || name.length > 30) {
