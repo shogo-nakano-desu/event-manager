@@ -5,7 +5,7 @@ export class UserName {
     if (name.length === 0 || name.length > 30) {
       throw new HttpException(
         'First and last name should not be 0 character and more than 30 characters',
-        HttpStatus.BAD_REQUEST,
+        HttpStatus.UNPROCESSABLE_ENTITY,
       );
     }
     this.#name = name;

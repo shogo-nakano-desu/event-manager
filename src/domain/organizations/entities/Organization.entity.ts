@@ -1,10 +1,10 @@
-import { OrganizationName } from '../values/OrganizationName.values';
+import { ODTName } from '../values/ODTName.values';
 import { Id } from '../../common/values/Id.value';
 export class Organization {
   private readonly organizationId: Id;
-  #organizationName: OrganizationName;
+  #organizationName: ODTName;
 
-  constructor(organizationId: Id, organizationName: OrganizationName) {
+  constructor(organizationId: Id, organizationName: ODTName) {
     this.organizationId = organizationId;
     this.#organizationName = organizationName;
   }
